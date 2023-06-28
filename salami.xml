@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="OPLUS"
+      fetch="https://github.com/OnePlus-11-Development/"
+      sync-c="true"
+      sync-tags="false"
+      revision="lineage-20" />
+  
+  <remove-project name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr"/>
+  <project name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" path="vendor/qcom/opensource/data-ipa-cfg-mgr" remote="OPLUS" revision="lineage-20.0"/>
+
+  <remove-project name="LineageOS/android_vendor_qcom_opensource_dataservices"/>
+  <project name="android_vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="OPLUS" revision="lineage-20.0"/>
+
+  <project name="android_device_oneplus_salami" path="device/oneplus/salami" remote="OPLUS"/>
+  <project name="android_device_oneplus_salami-kernel" path="device/oneplus/salami-kernel" remote="OPLUS"/>
+  <project name="android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" remote="OPLUS"/>
+
+  <project name="android_kernel_oneplus_sm8550" path="kernel/oneplus/salami-kernel" remote="OPLUS" revision="lineage-20-old-1"/>
+  <project name="android_hardware_qcom-caf_kernel-headers" path="hardware/qcom-caf/kernel-headers" remote="OPLUS"/>
+  <project name="android_hardware_qcom_media" path="hardware/qcom-caf/sm8550/media/" remote="OPLUS" revision="lineage-20.0-caf-sm8550"/>
+  <project name="android_hardware_qcom_audio" path="hardware/qcom-caf/sm8550/audio/" remote="OPLUS" revision="lineage-20.0-caf-sm8550"/>
+  <project name="android_hardware_qcom_display" path="hardware/qcom-caf/sm8550/display/" remote="OPLUS" revision="lineage-20.0-caf-sm8550"/>
+  <project name="LineageOS/android_vendor_qcom_opensource_core-utils-vendor" path="vendor/qcom/opensource/core-utils-vendor" revision="lineage-20.0"/>
+
+  <project name="vendor_oneplus_salami" path="vendor/oneplus/salami" remote="OPLUS"/>
+  <project name="vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="OPLUS"/>
+  <project name="android_hardware_oplus" path="hardware/oplus" remote="OPLUS"/>
+
+  <project name="android_vendor_qcom_opensource_agm" path="vendor/qcom/opensource/agm" remote="OPLUS" revision="lineage-20.0"/>
+  <project name="android_vendor_qcom_opensource_pal" path="vendor/qcom/opensource/pal" remote="OPLUS" revision="lineage-20.0"/>
+  <project name="android_vendor_qcom_opensource_audio-hal_st-hal-ar" path="vendor/qcom/opensource/audio-hal/st-hal-ar" remote="OPLUS" revision="lineage-20.0"/>
+
+</manifest>

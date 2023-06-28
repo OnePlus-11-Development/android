@@ -1,0 +1,82 @@
+LineageOS
+===========
+
+Getting started
+---------------
+
+To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+
+Initialize your local repository as you usually do for LineageOS :
+```
+repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
+```
+To build for the Oneplus 11, you will need specific repositories. Use these commands to sync them :
+```
+mkdir .repo/local_manifests && wget https://raw.githubusercontent.com/OnePlus-11-Development/android/master/salami.xml -O .repo/local_manifests/salami.xml
+```
+Then to sync up:
+```
+repo sync
+```
+Do not forget to `git lfs pull`, just in case:
+```
+repo forall -c 'git lfs pull'
+```
+
+
+Building for the Oneplus 11
+------------------
+To build LineageOS for the Oneplus 11, you will need to use a few commands.
+
+Load your build environnement using this command:
+```
+. build/envsetup.sh
+```
+Use the `repopick` command to cherry-pick `kalama` related changes:
+```
+repopick -t 13-kalama --ignore-missing
+```
+Delete device trees dependencies as they are conflicting with this setup right now:
+```
+rm device/oneplus/*/*.dependencies
+```
+You're now ready to start the build:
+```
+lunch lineage_salami-userdebug
+m
+```
+
+
+Flashing the images
+------------------
+Our work is currently based on the CPH2449_A10 firmware. If you're not running A10, flash it and boot it at least once before flashing your build. ([CPH2449_A10 Full OTA](https://gauss-componentotacostmanual-eu.allawnofs.com/remove-0dc1e9b2e9f2d9a437851009a5949a79/component-ota/23/06/14/77b53202e03140dfa3c4728d26f9325b.zip))
+
+Unlock your bootloader if you haven't done it before
+```
+fastboot flashing unlock
+```
+Put your phone in bootloader mode and then run:
+```
+fastboot -w
+fastboot reboot fastboot
+```
+Once your device is in FastbootD mode, cd the `cd` command to navigate to your build out folder, most likely `out/target/product/salami` and run all these commands to flash the images:
+```
+fastboot flash boot boot.img
+fastboot flash init_boot init_boot.img
+fastboot flash dtbo dtbo.img
+fastboot flash recovery recovery.img
+fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
+fastboot --disable-verity --disable-verification flash vbmeta_system vbmeta_system.img
+fastboot --disable-verity --disable-verification flash vbmeta_vendor vbmeta_vendor.img
+fastboot flash vendor_boot vendor_boot.img
+fastboot wipe-super super_empty.img
+fastboot flash odm odm.img
+fastboot flash product product.img
+fastboot flash system system.img
+fastboot flash system_dlkm system_dlkm.img
+fastboot flash system_ext system_ext.img
+fastboot flash vendor vendor.img
+fastboot flash vendor_dlkm vendor_dlkm.img
+fastboot reboot
+```
