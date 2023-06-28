@@ -60,7 +60,11 @@ Put your phone in bootloader mode and then run:
 fastboot -w
 fastboot reboot fastboot
 ```
-Once your device is in FastbootD mode, cd the `cd` command to navigate to your build out folder, most likely `out/target/product/salami` and run all these commands to flash the images:
+Once your device is in FastbootD mode, cd the `cd` command to navigate to your build out folder, most likely `out/target/product/salami` and run:
+```
+fastboot flashall
+```
+If you cannot flash your device using your build machine, move all images to a local machine, and use all these commands to flash the images:
 ```
 fastboot flash boot boot.img
 fastboot flash init_boot init_boot.img
