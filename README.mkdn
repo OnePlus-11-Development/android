@@ -40,10 +40,6 @@ Delete device trees dependencies as they are conflicting with this setup right n
 ```
 rm device/oneplus/*/*.dependencies
 ```
-Because of a configuration mismatch, you'll have to symlink the kernel folder :
-```
-cd kernel/oneplus && ln -s salami-kernel sm8550
-```
 You're now ready to start the build:
 ```
 lunch lineage_salami-userdebug
