@@ -34,7 +34,8 @@ Load your build environnement using this command:
 ```
 Use the `repopick` command to cherry-pick `kalama` related changes:
 ```
-repopick -t 13-kalama --ignore-missing
+repopick -t 13-kalama
+repopick -t 13-kalama-oplus
 ```
 Delete device trees dependencies as they are conflicting with this setup right now:
 ```

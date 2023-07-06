@@ -20,11 +20,11 @@
   <project name="android_hardware_qcom_media" path="hardware/qcom-caf/sm8550/media/" remote="OPLUS" revision="lineage-20.0-caf-sm8550"/>
   <project name="android_hardware_qcom_audio" path="hardware/qcom-caf/sm8550/audio/" remote="OPLUS" revision="lineage-20.0-caf-sm8550"/>
   <project name="android_hardware_qcom_display" path="hardware/qcom-caf/sm8550/display/" remote="OPLUS" revision="lineage-20.0-caf-sm8550"/>
+  <project name="LineageOS/android_hardware_oplus" path="hardware/oplus" />
   <project name="LineageOS/android_vendor_qcom_opensource_core-utils-vendor" path="vendor/qcom/opensource/core-utils-vendor" revision="lineage-20.0"/>
 
   <project name="vendor_oneplus_salami" path="vendor/oneplus/salami" remote="OPLUS"/>
   <project name="vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="OPLUS"/>
-  <project name="android_hardware_oplus" path="hardware/oplus" remote="OPLUS"/>
 
   <project name="android_vendor_qcom_opensource_agm" path="vendor/qcom/opensource/agm" remote="OPLUS" revision="lineage-20.0"/>
   <project name="android_vendor_qcom_opensource_pal" path="vendor/qcom/opensource/pal" remote="OPLUS" revision="lineage-20.0"/>
