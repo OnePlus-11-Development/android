@@ -23,9 +23,6 @@
   <project name="LineageOS/android_hardware_oplus" path="hardware/oplus" revision="lineage-20" />
   <project name="LineageOS/android_vendor_qcom_opensource_core-utils-vendor" path="vendor/qcom/opensource/core-utils-vendor" revision="lineage-20.0"/>
 
-  <project name="vendor_oneplus_salami" path="vendor/oneplus/salami" remote="OPLUS"/>
-  <project name="vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="OPLUS"/>
-
   <project name="android_vendor_qcom_opensource_agm" path="vendor/qcom/opensource/agm" remote="OPLUS" revision="lineage-20.0"/>
   <project name="android_vendor_qcom_opensource_pal" path="vendor/qcom/opensource/pal" remote="OPLUS" revision="lineage-20.0"/>
   <project name="android_vendor_qcom_opensource_audio-hal_st-hal-ar" path="vendor/qcom/opensource/audio-hal/st-hal-ar" remote="OPLUS" revision="lineage-20.0"/>
