@@ -24,6 +24,24 @@ repo forall -c 'git lfs pull'
 ```
 
 
+Obtaining the proprietary files
+------------------
+To obtain the Oneplus 11 proprietary files, clone [this repository](https://gitlab.com/dekefake/oneplus11_blobs_cicd) to `~/android/system_dump/` and run `./extract-files.sh` :
+```
+# Clone the full repo
+git clone https://gitlab.com/dekefake/oneplus11_blobs_cicd ~/android/system_dump/
+cd ~/android/system_dump/
+git lfs pull
+
+# Copy needed blobs to vendor/oneplus
+cd ~/android/LineageOS
+. build/envsetup.sh
+cd device/oneplus/salami
+./extract-files.sh ~/android/system_dump/
+```
+You can also extract the blobs yourself from a Oneplus Full OTA, following the [lineageos wiki](https://wiki.lineageos.org/extracting_blobs_from_zips#extracting-proprietary-blobs-from-payload-based-otas).
+
+
 Building for the Oneplus 11
 ------------------
 To build LineageOS for the Oneplus 11, you will need to use a few commands.
@@ -56,35 +74,24 @@ Unlock your bootloader if you haven't done it before
 ```
 fastboot flashing unlock
 ```
-Put your phone in bootloader mode and then run:
+Put your phone in bootloader mode :
 ```
 fastboot -w
 fastboot reboot fastboot
 ```
-Once your device is in FastbootD mode, cd the `cd` command to navigate to your build out folder, most likely `out/target/product/salami` and run:
+Once your device is in bootloader mode, cd the `cd` command to navigate to your build out folder, most likely `out/target/product/salami` and run:
 ```
+# Replace with your path
+export ANDROID_PRODUCT_OUT=~/android/LineageOS/out/target/product/salami
 fastboot flashall
 ```
-If you cannot flash your device using your build machine, move all images to a local machine, and use all these commands to flash the images:
+If you cannot flash your device using your build machine (for example if you're using a remote server to build LineageOS) copy all files in `out/target/product/salami` to a local machine (no need to copy the folders), and use all these commands to flash the images:
 ```
-fastboot flash boot boot.img
-fastboot flash init_boot init_boot.img
-fastboot flash dtbo dtbo.img
-fastboot flash recovery recovery.img
-fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
-fastboot --disable-verity --disable-verification flash vbmeta_system vbmeta_system.img
-fastboot --disable-verity --disable-verification flash vbmeta_vendor vbmeta_vendor.img
-fastboot flash vendor_boot vendor_boot.img
-fastboot wipe-super super_empty.img
-fastboot flash odm odm.img
-fastboot flash product product.img
-fastboot flash system system.img
-fastboot flash system_dlkm system_dlkm.img
-fastboot flash system_ext system_ext.img
-fastboot flash vendor vendor.img
-fastboot flash vendor_dlkm vendor_dlkm.img
-fastboot reboot
+# Replace with your path
+export ANDROID_PRODUCT_OUT=/Users/dekefake/Downloads/LineageOS_images
+fastboot flashall
 ```
+If you want to flash Magisk right after flashing LineageOS, rather use `fastboot flashall --skip-reboot` and then flash Magisk using `adb sideload` in LineageOS recovery.
 
 
 Updating firmware
