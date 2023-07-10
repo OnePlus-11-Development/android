@@ -50,7 +50,7 @@ m
 
 Flashing the images
 ------------------
-Our work is currently based on the CPH2449_A10 firmware. If you're not running A10, flash it and boot it at least once before flashing your build. ([CPH2449_A10 Full OTA](https://gauss-componentotacostmanual-eu.allawnofs.com/remove-0dc1e9b2e9f2d9a437851009a5949a79/component-ota/23/06/14/77b53202e03140dfa3c4728d26f9325b.zip))
+Our work is currently based on the CPH2449_A10 firmware. If you're not running A23, flash it and boot it at least once before flashing your build. ([CPH2449_A23 Full OTA](https://gauss-componentotacostmanual-eu.allawnofs.com/remove-0dc1e9b2e9f2d9a437851009a5949a79/component-ota/23/06/14/77b53202e03140dfa3c4728d26f9325b.zip))
 
 Unlock your bootloader if you haven't done it before
 ```
