@@ -88,7 +88,7 @@ fastboot reboot
 
 
 Updating firmware
-
+---------------
 To update your device, download a full OTA package and extract the firmware images using [payload-dumper-go](https://github.com/ssut/payload-dumper-go). Then, boot your device into FastbootD mode, and flash these images :
 ```
 fastboot flash --slot=all abl abl.img
