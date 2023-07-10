@@ -8,6 +8,9 @@
   
   <remove-project name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr"/>
   <project name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" path="vendor/qcom/opensource/data-ipa-cfg-mgr" remote="OPLUS" revision="lineage-20.0"/>
+  
+  <remove-project name="LineageOS/android_device_qcom_sepolicy_vndr"/>
+  <project name="android_device_qcom_sepolicy_vndr" path="device/qcom/sepolicy_vndr" remote="OPLUS" revision="lineage-20.0"/>
 
   <remove-project name="LineageOS/android_vendor_qcom_opensource_dataservices"/>
   <project name="android_vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="OPLUS" revision="lineage-20.0"/>
