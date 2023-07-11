@@ -54,6 +54,8 @@ Use the `repopick` command to cherry-pick `kalama` related changes:
 ```
 repopick -t 13-kalama
 repopick -t 13-kalama-oplus
+# Snapchat & other app related video fixes
+repopick 342860-342864
 ```
 Delete device trees dependencies as they are conflicting with this setup right now:
 ```
