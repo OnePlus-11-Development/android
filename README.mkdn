@@ -53,7 +53,15 @@ Load your build environnement using this command:
 Use the `repopick` command to cherry-pick `kalama` related changes:
 ```
 repopick -t 13-kalama
-repopick -t 13-kalama-oplus
+repopick 357368
+repopick 361699
+repopick 337847
+repopick 361700
+repopick 356709
+repopick 356710
+repopick 360881
+repopick 361701
+repopick 361886
 # Snapchat & other app related video fixes
 repopick 342860-342864
 ```
