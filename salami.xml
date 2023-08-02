@@ -25,6 +25,8 @@
   <project name="vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="OPLUS_GITLAB"/>
 
   <project name="android_kernel_oneplus_sm8550" path="kernel/oneplus/sm8550" remote="OPLUS"/>
+  <project name="android_kernel_oneplus_sm8550-modules" path="kernel/oneplus/sm8550-modules" remote="OPLUS"/>
+
   <project name="android_hardware_qcom_media" path="hardware/qcom-caf/sm8550/media/" remote="OPLUS" revision="lineage-20.0-caf-sm8550"/>
   <project name="android_hardware_qcom_audio" path="hardware/qcom-caf/sm8550/audio/" remote="OPLUS" revision="lineage-20.0-caf-sm8550"/>
   <project name="android_hardware_qcom_display" path="hardware/qcom-caf/sm8550/display/" remote="OPLUS" revision="lineage-20.0-caf-sm8550"/>
