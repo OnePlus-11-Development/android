@@ -12,17 +12,15 @@
       sync-tags="false"
       revision="lineage-20" />
   
-  <remove-project name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr"/>
-  <project name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" path="vendor/qcom/opensource/data-ipa-cfg-mgr" remote="OPLUS" revision="lineage-20.0"/>
-
   <project name="android_device_oneplus_salami" path="device/oneplus/salami" remote="OPLUS"/>
-  <project name="android_device_oneplus_salami-kernel" path="device/oneplus/salami-kernel" remote="OPLUS"/>
   <project name="android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" remote="OPLUS"/>
-  <project name="vendor_oneplus_salami" path="vendor/oneplus/salami" remote="OPLUS_GITLAB"/>
-  <project name="vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="OPLUS_GITLAB"/>
 
   <project name="android_kernel_oneplus_sm8550" path="kernel/oneplus/sm8550" remote="OPLUS"/>
+  <project name="android_kernel_oneplus_sm8550-devicetrees" path="kernel/oneplus/sm8550-devicetrees" remote="OPLUS"/>
   <project name="android_kernel_oneplus_sm8550-modules" path="kernel/oneplus/sm8550-modules" remote="OPLUS"/>
+
+  <project name="vendor_oneplus_salami" path="vendor/oneplus/salami" remote="OPLUS_GITLAB"/>
+  <project name="vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="OPLUS_GITLAB"/>
 
   <project name="LineageOS/android_hardware_oplus" path="hardware/oplus" revision="lineage-20" />
 </manifest>
