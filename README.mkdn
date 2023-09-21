@@ -24,24 +24,6 @@ repo forall -c 'git lfs pull'
 ```
 
 
-Obtaining the proprietary files
-------------------
-To obtain the Oneplus 11 proprietary files, clone [this repository](https://gitlab.com/dekefake/oneplus11_blobs_cicd) to `~/android/system_dump/` and run `./extract-files.sh` :
-```
-# Clone the full repo
-git clone https://gitlab.com/dekefake/oneplus11_blobs_cicd ~/android/system_dump/
-cd ~/android/system_dump/
-git lfs pull
-
-# Copy needed blobs to vendor/oneplus
-cd ~/android/LineageOS
-. build/envsetup.sh
-cd device/oneplus/salami
-./extract-files.sh ~/android/system_dump/
-```
-You can also extract the blobs yourself from a Oneplus Full OTA, following the [lineageos wiki](https://wiki.lineageos.org/extracting_blobs_from_zips#extracting-proprietary-blobs-from-payload-based-otas).
-
-
 Building for the Oneplus 11
 ------------------
 To build LineageOS for the Oneplus 11, you will need to use a few commands.
@@ -65,11 +47,6 @@ repopick 361886
 repopick 363134
 # Snapchat & other app related video fixes
 repopick 342860-342864
-```
-Delete device trees dependencies as they are conflicting with this setup right now:
-```
-rm device/oneplus/*/*.dependencies
-```
 You're now ready to start the build:
 ```
 lunch lineage_salami-userdebug
@@ -79,7 +56,7 @@ m
 
 Flashing the images
 ------------------
-Our work is currently based on the CPH2449_A23 firmware. If you're not running A23, flash it and boot it at least once before flashing your build. ([CPH2449_A23 Full OTA](https://gauss-componentotacostmanual-eu.allawnofs.com/remove-0dc1e9b2e9f2d9a437851009a5949a79/component-ota/23/06/14/77b53202e03140dfa3c4728d26f9325b.zip))
+Our work is currently based on the CPH2449_A25 firmware. If you're not running A25, flash it and boot it at least once before flashing your build. ([CPH2449_A25 Full OTA](https://gauss-componentotacostmanual-eu.allawnofs.com/remove-28f8287dcc47dbfd64d1cfb31f877f75/component-ota/23/08/28/9d93d654eec1429684aec3692137c786.zip))
 
 Unlock your bootloader if you haven't done it before
 ```

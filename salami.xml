@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="OPLUS"
-      fetch="https://github.com/OnePlus-11-Development/"
+  <remote name="TheMuppets"
+      fetch="https://gitlab.com/the-muppets/"
       sync-c="true"
-      sync-tags="false"
-      revision="lineage-20" />
-
-  <remote name="OPLUS_GITLAB"
-      fetch="https://gitlab.com/oneplus-11-development/"
-      sync-c="true"
-      sync-tags="false"
-      revision="lineage-20" />
+      sync-tags="false" />
   
-  <project name="android_device_oneplus_salami" path="device/oneplus/salami" remote="OPLUS"/>
-  <project name="android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" remote="OPLUS"/>
+  <project name="LineageOS/android_device_oneplus_salami" path="device/oneplus/salami" revision="lineage-20" />
+  <project name="LineageOS/android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" revision="lineage-20" />
 
-  <project name="android_kernel_oneplus_sm8550" path="kernel/oneplus/sm8550" remote="OPLUS"/>
-  <project name="android_kernel_oneplus_sm8550-devicetrees" path="kernel/oneplus/sm8550-devicetrees" remote="OPLUS"/>
-  <project name="android_kernel_oneplus_sm8550-modules" path="kernel/oneplus/sm8550-modules" remote="OPLUS"/>
-
-  <project name="vendor_oneplus_salami" path="vendor/oneplus/salami" remote="OPLUS_GITLAB"/>
-  <project name="vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="OPLUS_GITLAB"/>
+  <project name="LineageOS/android_kernel_oneplus_sm8550" path="kernel/oneplus/sm8550" revision="lineage-20" />
+  <project name="LineageOS/android_kernel_oneplus_sm8550-devicetrees" path="kernel/oneplus/sm8550-devicetrees" revision="lineage-20" />
+  <project name="LineageOS/android_kernel_oneplus_sm8550-modules" path="kernel/oneplus/sm8550-modules" revision="lineage-20" />
 
   <project name="LineageOS/android_hardware_oplus" path="hardware/oplus" revision="lineage-20" />
+
+  <project name="proprietary_vendor_oneplus_salami" path="vendor/oneplus/salami" remote="TheMuppets" revision="lineage-20" />
+  <project name="proprietary_vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="TheMuppets" revision="lineage-20" />
 </manifest>
