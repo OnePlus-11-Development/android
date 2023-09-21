@@ -45,8 +45,10 @@ repopick 360881
 repopick 361701
 repopick 361886
 repopick 363134
+repopick -t 13-kalama-oplus
 # Snapchat & other app related video fixes
 repopick 342860-342864
+```
 You're now ready to start the build:
 ```
 lunch lineage_salami-userdebug
