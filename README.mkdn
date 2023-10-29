@@ -32,11 +32,9 @@ Load your build environnement using this command:
 ```
 . build/envsetup.sh
 ```
-Use the `repopick` command to cherry-pick `kalama` related changes:
+Use the `repopick` command to cherry-pick `kalama` specific fixes:
 ```
-repopick -t 13-kalama
-# Snapchat & other app related video fixes
-repopick 342860-342864
+repopick -t 13-taro-kalama
 ```
 You're now ready to start the build:
 ```
